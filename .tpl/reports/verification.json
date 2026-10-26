@@ -3,9 +3,17 @@
   "format": "git-template-verification",
   "formatVersion": "0.2.0",
   "status": "passed",
-  "checkedAt": "2026-10-26T01:38:20.325Z",
-  "sourceCommit": null,
-  "sourceDigest": "fe59492cbd6047c132e2454596c9a5c31333f4eae36029322cd3e1585515c7bb",
+  "checkedAt": "2026-10-26T03:28:28.636Z",
+  "sourceCommit": "43b4fde106e32faf2650be793caf65e3fa491c85",
+  "sourceDigest": "4967c5345a113f7766dfa66e6db3942837f69c976865ef3607b14845f8e2792b",
+  "environment": {
+    "platform": "linux",
+    "arch": "x64",
+    "node": "v24.16.0",
+    "packageManager": "pnpm@9.15.4",
+    "cleanDirectory": false,
+    "localGitClone": true
+  },
   "checks": [
     {
       "id": "typecheck",
@@ -17,8 +25,8 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "startedAt": "2026-10-26T01:36:52.739Z",
-      "finishedAt": "2026-10-26T01:36:55.008Z"
+      "startedAt": "2026-10-26T03:28:06.949Z",
+      "finishedAt": "2026-10-26T03:28:07.813Z"
     },
     {
       "id": "lint",
@@ -30,8 +38,8 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "startedAt": "2026-10-26T01:36:55.009Z",
-      "finishedAt": "2026-10-26T01:36:58.122Z"
+      "startedAt": "2026-10-26T03:28:07.814Z",
+      "finishedAt": "2026-10-26T03:28:09.980Z"
     },
     {
       "id": "test",
@@ -43,8 +51,8 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "startedAt": "2026-10-26T01:36:58.123Z",
-      "finishedAt": "2026-10-26T01:36:58.914Z"
+      "startedAt": "2026-10-26T03:28:09.980Z",
+      "finishedAt": "2026-10-26T03:28:10.675Z"
     },
     {
       "id": "build",
@@ -56,8 +64,8 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "startedAt": "2026-10-26T01:36:58.914Z",
-      "finishedAt": "2026-10-26T01:37:17.578Z"
+      "startedAt": "2026-10-26T03:28:10.675Z",
+      "finishedAt": "2026-10-26T03:28:27.498Z"
     }
   ],
   "services": [
@@ -65,22 +73,11 @@
       "id": "web",
       "status": "passed",
       "stopped": true,
-      "checkedAt": "2026-10-26T01:37:19.307Z"
+      "checkedAt": "2026-10-26T03:28:28.636Z"
     }
   ],
-  "environment": {
-    "platform": "linux",
-    "arch": "x64",
-    "node": "v24.16.0",
-    "packageManager": "pnpm 9.15.4",
-    "cleanDirectory": false,
-    "localGitClone": false
-  },
   "limitations": [
-    "完整原站三端逐帧及每项hover/滚动轨迹尚未全部对照，不能宣称全量视觉动效一致。",
-    "浏览器语音识别、朗读与系统减少动态效果未实际授权/切换验证。",
-    "截图实际像素小于配置视口，已按解码真实尺寸登记，未放大。",
-    "非独立干净Git克隆验收。",
-    "素材商业再分发授权未核实，listed=false、redistributionAllowed=false。"
+    "本次在本地 WSL Git 克隆中叠加明确待交付修改进行检查，未重复完整浏览器交互矩阵。",
+    "原站三端逐帧动效、系统减少动态效果及商业素材再分发权利尚未完整核实，保持未上架。"
   ]
 }

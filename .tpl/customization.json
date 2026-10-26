@@ -69,6 +69,11 @@
           "path": "src/features/site-templates/catalog/learnai/Mockup.tsx",
           "kind": "file",
           "purpose": "中文示意界面"
+        },
+        {
+          "path": "src/features/site-templates/catalog/learnai/scrollbars.css",
+          "kind": "file",
+          "purpose": "滚动条主题、路由隔离与原生触控适配"
         }
       ],
       "constraints": [

@@ -1,3 +1,4 @@
+@import './scrollbars.css';
 @import url('/templates/learnai/fonts/misans/MiSans-Regular.css');
 @import url('/templates/learnai/fonts/misans/MiSans-Bold.css');
 @font-face{font-family:LearnPop;src:url('/templates/learnai/fonts/poppins-latin-400.woff2') format('woff2');font-weight:400;font-display:swap}
@@ -149,7 +150,7 @@
 .la-support i:after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--la-green);animation:la-ping 1s cubic-bezier(0,0,.2,1) infinite}
 @keyframes la-ping{75%,100%{transform:scale(2);opacity:0}}
 .la-demo-note{display:block;text-align:center;color:#718178;font-size:11px;line-height:1.6;margin:12px 0}
-.la-testimonial-row{display:flex;gap:24px;overflow-x:auto;padding:0 16px 40px;scrollbar-width:thin;scrollbar-color:#d3e9df transparent;scroll-snap-type:x proximity}
+.la-testimonial-row{display:flex;gap:24px;overflow-x:auto;padding:0 16px 40px;scroll-snap-type:x proximity}
 .la-testimonial{width:422px;height:450px;flex-shrink:0;position:relative;overflow:hidden;scroll-snap-align:start;clip-path:polygon(11% 0,100% 0,100% 90%,89% 90%,89% 100%,0 100%,0 10%,11% 10%);background:#f7f8f7}
 .la-testimonial>img{position:absolute;inset:0;width:100%;height:100%!important;object-fit:cover}
 .la-testimonial:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 45%,#000)}

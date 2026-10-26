@@ -1,0 +1,113 @@
+/* 整页样式由模板是否存在决定，离开模板路由后自动恢复宿主滚动条。 */
+:where(html:has(.la-root), .la-root) {
+  --la-scrollbar-track: #eff7f3;
+  --la-scrollbar-thumb: #78b49c;
+  --la-scrollbar-hover: #3e9272;
+  --la-scrollbar-active: #237859;
+  --la-scrollbar-size: 9px;
+  --la-scrollbar-radius: 999px;
+}
+
+.la-root {
+  --la-scrollbar-size: 8px;
+}
+
+.la-root :is(.la-practice, .la-footer) {
+  --la-scrollbar-track: #101e18;
+  --la-scrollbar-thumb: #477f67;
+  --la-scrollbar-hover: #70b795;
+  --la-scrollbar-active: #95d8b6;
+}
+
+html:has(.la-root),
+.la-root * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--la-scrollbar-thumb) var(--la-scrollbar-track);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html:has(.la-root) {
+    scrollbar-gutter: stable;
+  }
+}
+
+.la-root .la-drawer-body {
+  overscroll-behavior-y: contain;
+}
+
+.la-root .la-testimonial-row {
+  overscroll-behavior-x: contain;
+}
+
+/* Chromium / Safari 的标准滚动条属性会覆盖伪元素，显式交回伪元素以保留交互反馈。 */
+@supports selector(::-webkit-scrollbar) {
+  html:has(.la-root),
+  .la-root * {
+    scrollbar-width: auto;
+    scrollbar-color: auto;
+  }
+
+  html:has(.la-root)::-webkit-scrollbar,
+  .la-root ::-webkit-scrollbar {
+    width: var(--la-scrollbar-size);
+    height: var(--la-scrollbar-size);
+  }
+
+  html:has(.la-root)::-webkit-scrollbar-track,
+  .la-root ::-webkit-scrollbar-track {
+    background: var(--la-scrollbar-track);
+    border-radius: var(--la-scrollbar-radius);
+  }
+
+  html:has(.la-root)::-webkit-scrollbar-thumb,
+  .la-root ::-webkit-scrollbar-thumb {
+    min-height: 40px;
+    border: 2px solid var(--la-scrollbar-track);
+    border-radius: var(--la-scrollbar-radius);
+    background: var(--la-scrollbar-thumb);
+    background-clip: padding-box;
+  }
+
+  html:has(.la-root)::-webkit-scrollbar-thumb:hover,
+  .la-root ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--la-scrollbar-hover);
+  }
+
+  html:has(.la-root)::-webkit-scrollbar-thumb:active,
+  .la-root ::-webkit-scrollbar-thumb:active {
+    background-color: var(--la-scrollbar-active);
+  }
+
+  html:has(.la-root)::-webkit-scrollbar-corner,
+  .la-root ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  html:has(.la-root)::-webkit-scrollbar-button,
+  .la-root ::-webkit-scrollbar-button {
+    display: none;
+  }
+}
+
+/* 触控设备保留系统覆盖式滚动条；高对比模式交由系统决定可辨识颜色。 */
+@media (hover: none), (pointer: coarse), (forced-colors: active) {
+  html:has(.la-root),
+  .la-root * {
+    scrollbar-width: auto;
+    scrollbar-color: auto;
+    scrollbar-gutter: auto;
+  }
+
+  html:has(.la-root)::-webkit-scrollbar,
+  .la-root ::-webkit-scrollbar,
+  html:has(.la-root)::-webkit-scrollbar-track,
+  .la-root ::-webkit-scrollbar-track,
+  html:has(.la-root)::-webkit-scrollbar-thumb,
+  .la-root ::-webkit-scrollbar-thumb,
+  html:has(.la-root)::-webkit-scrollbar-corner,
+  .la-root ::-webkit-scrollbar-corner,
+  html:has(.la-root)::-webkit-scrollbar-button,
+  .la-root ::-webkit-scrollbar-button {
+    all: revert;
+  }
+}
