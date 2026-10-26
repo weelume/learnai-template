@@ -3,7 +3,7 @@
   "format": "git-template",
   "formatVersion": "0.2.0",
   "id": "learnai",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "gitUrl": "https://github.com/weelume/learnai-template",
   "name": "Learn.AI · AI 英语口语教练",
   "localizedNames": {

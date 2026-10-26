@@ -3,7 +3,7 @@
 @font-face{font-family:LearnPop;src:url('/templates/learnai/fonts/poppins-latin-400.woff2') format('woff2');font-weight:400;font-display:swap}
 @font-face{font-family:LearnPop;src:url('/templates/learnai/fonts/poppins-latin-600.woff2') format('woff2');font-weight:600;font-display:swap}
 @font-face{font-family:LearnPop;src:url('/templates/learnai/fonts/poppins-latin-700.woff2') format('woff2');font-weight:700;font-display:swap}
-.la-root{--la-green:#00b782;--la-deep:#1e332d;--la-muted:#6f7773;--la-border:#e6ece8;--la-glass:linear-gradient(145deg,#fff9,#f2fbf5b3);--la-shadow:0 12px 36px #183e2d0a;--la-dark:#050807;--la-radius:24px;--la-space:clamp(64px,8vw,120px);--la-container:1320px;--la-h1:clamp(28px,4.6vw,44px);--la-h2:clamp(24px,3.6vw,36px);--la-h3:clamp(20px,2.3vw,26px);color:var(--la-deep);font:400 16px/1.8 LearnMi,LearnPop,sans-serif;background:#fff;position:relative;isolation:isolate;overflow:clip}
+.la-root{--la-green:#00b782;--la-deep:#1e332d;--la-muted:#6f7773;--la-border:#e6ece8;--la-glass:linear-gradient(145deg,#fff9,#f2fbf5b3);--la-shadow:0 12px 36px #183e2d0a;--la-dark:#050807;--la-radius:24px;--la-space:clamp(64px,8vw,120px);--la-container:1320px;--la-h1:clamp(28px,4.6vw,44px);--la-h2:clamp(24px,3.6vw,36px);--la-h3:clamp(20px,2.3vw,26px);color:var(--la-deep);font:400 16px/1.8 LearnPop,LearnMi,sans-serif;background:#fff;position:relative;isolation:isolate;overflow:clip}
 .la-root[lang=en]{font-family:LearnPop,LearnMi,sans-serif}
 .la-root *{box-sizing:border-box}
 .la-root :is(h1,h2,h3,h4,p){margin:0}
