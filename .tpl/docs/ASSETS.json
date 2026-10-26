@@ -1,0 +1,348 @@
+[
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/feature-bg.svg",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/F%20Box.svg",
+    "sha256": "73ba7af0d55c33bdf054ab4646721ea49d73260831e579090eac6d0408df12e2"
+  },
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/card-1.png",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/card%201.png",
+    "sha256": "2c074413e094dcc805848b80567f64508f72e5f0926a0b20fad122e3255f64d6"
+  },
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/card-2.png",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/Card%202.png",
+    "sha256": "345c8f23b965602a833e10d77455db3433e29d3f892036207af6a073d28f69d1"
+  },
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/card-4.png",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/Card%204.png",
+    "sha256": "a6d5c1aafcc0953a3049bff99b661c27b17e5116c6ed0ef5ccb3bcc954f900e8"
+  },
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/card-3.png",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/Card%203.png",
+    "sha256": "be8562a3f6fb18c6cb6a7f6ba0e6894e818234f25c427a74ebec320dff2d14d9"
+  },
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/side.png",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/side%20image.png",
+    "sha256": "afc3221c883c99ce5a76bfae08fca0488671197563c5784245929d2b0fc87ec4"
+  },
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/step-1.svg",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/H1.svg",
+    "sha256": "0cfd26074a452d0ce824e7e26a384b6cb678acb1044f16b6b00e190d9711b044"
+  },
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/phone.png",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/app%20screen.png",
+    "sha256": "1fe970113aa39fcec15e45952b453cdf53b5373411c7972592de3651ae184a07"
+  },
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/step-3.svg",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/H3.svg",
+    "sha256": "badd2163f9594e3c6ee60bfcba68a34bbf73d96c0fd20df9de1e59899e5b0184"
+  },
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/step-2.svg",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/H2.svg",
+    "sha256": "7c7e2b39e74aef734e30556569420801189e1409858e1a6d7ec74034e08aae83"
+  },
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/hero-bg.png",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/Hero%20BG.png",
+    "sha256": "771160d6a013393ae001c4987b2557d248ca85677a2e12fa8b84758d96418ba6"
+  },
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/work-1.png",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/Work%201.png",
+    "sha256": "b0309036bd9300d1b7534201393b788176becc945b57c0d677acba3e780c9db0"
+  },
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/work-2.png",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/Work%202.png",
+    "sha256": "771dc220015323f9cbbfaddc06e02eb9600f8f3f821014bc63a63d8e267bcbda"
+  },
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/work-3.png",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/work%203.png",
+    "sha256": "d49023c5046ea74d679d30f6be49478b8279a398c02b3250a6a41c15b4ed9653"
+  },
+  {
+    "source": "Jiro Learn.AI 公开预览；商业再分发授权未核实",
+    "path": "images/calls.png",
+    "url": "https://cdn.jiro.build/Learn.AI/Image/show%20app.png",
+    "sha256": "7b06f1077530e28f9d48708f73be44faac40910b43d682a1e393f20dbbdca050"
+  },
+  {
+    "source": "原站引用 Unsplash 头像",
+    "path": "images/avatar-3.jpg",
+    "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80",
+    "sha256": "fe8f4d0f4db45b3bb0fb26cb4ef4ed3f646f90ce943fad503c11036a524ac3c9"
+  },
+  {
+    "source": "原站引用 Unsplash 头像",
+    "path": "images/avatar-2.jpg",
+    "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80",
+    "sha256": "f195cfcb119c7bedecf8f3764f697de65b481f71d61dde22e61b5496cd9ba993"
+  },
+  {
+    "source": "原站引用 Unsplash 头像",
+    "path": "images/avatar-4.jpg",
+    "url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&h=80&q=80",
+    "sha256": "0eb9d956edcd1e978143a09414ae2affc6441236a1c90b46444c6a617a50a0e8"
+  },
+  {
+    "source": "原站引用 Unsplash 头像",
+    "path": "images/avatar-1.jpg",
+    "url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&h=80&q=80",
+    "sha256": "6aba988b8abf321a3b43a611c59c395535ada3c591fff971bb717163e86a8586"
+  },
+  {
+    "source": "原站引用 Unsplash 人像；示例评价不构成真实推荐",
+    "path": "images/person-1.jpg",
+    "url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600",
+    "sha256": "23a416ccde2d73eff2aed8c66a39cefb2bcd6d97680dd4c68db9dca03a8a6bb8"
+  },
+  {
+    "source": "原站引用 Unsplash 人像；示例评价不构成真实推荐",
+    "path": "images/person-2.jpg",
+    "url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=600",
+    "sha256": "8bdfab1517a22f59ad6ac9360c1303b2859d014e507c3973edee2847116298c1"
+  },
+  {
+    "source": "原站引用 Unsplash 人像；示例评价不构成真实推荐",
+    "path": "images/person-3.jpg",
+    "url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600",
+    "sha256": "8ea0c129bd3f1ef06e74fb8e323c572789b4b8d4b1af7c04720ff45ca0f63f02"
+  },
+  {
+    "source": "原站引用 Unsplash 人像；示例评价不构成真实推荐",
+    "path": "images/person-6.jpg",
+    "url": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=600",
+    "sha256": "edc56510fbf47c951cb3acae6dbc051214087cded9e03344fec91d7e11e76968"
+  },
+  {
+    "source": "原站引用 Unsplash 人像；示例评价不构成真实推荐",
+    "path": "images/person-4.jpg",
+    "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600",
+    "sha256": "fc1498dfde4c18bc185e3477d5bd0070cc3ffa92294d3534b11ab86844b3f211"
+  },
+  {
+    "source": "原站引用 Unsplash 人像；示例评价不构成真实推荐",
+    "path": "images/person-5.jpg",
+    "url": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=600",
+    "sha256": "9d2429fd67d7fb961ec2816d2a3c4a569d70096ef743b318f5fd57cb0e8cdc87"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/za.png",
+    "url": "https://flagcdn.com/w40/za.png",
+    "sha256": "8b4bf6a93680f7156356f109f664a7bd0e2df48e83bfc449f0d945378b06e9f0"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/et.png",
+    "url": "https://flagcdn.com/w40/et.png",
+    "sha256": "00644cd69b1afff9d741a8dc1510b8219636103658c820c3f08f86b36d967ac4"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/ae.png",
+    "url": "https://flagcdn.com/w40/ae.png",
+    "sha256": "77a9d61e1b4fd75884779089406ff11c9d1566c4b6fd575b370f4a207d153f67"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/am.png",
+    "url": "https://flagcdn.com/w40/am.png",
+    "sha256": "7fbd636c47e19d0556de6b5e5424c083dd944e6f308ee39d0cfd1dd3e068824b"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/in.png",
+    "url": "https://flagcdn.com/w40/in.png",
+    "sha256": "7402a78868940a6f52ae0e9793667a42fcd71945df8d763aca0fc186d1ab1241"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/az.png",
+    "url": "https://flagcdn.com/w40/az.png",
+    "sha256": "72052bdac6244d9b1dd4b32aa938f468dc2ab49cf23f7dad4787d3e04762f1c3"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/by.png",
+    "url": "https://flagcdn.com/w40/by.png",
+    "sha256": "7044a48340fd942ebd462c5f5f27adefa6b443d2805201aa036939238dfdb8b3"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/bd.png",
+    "url": "https://flagcdn.com/w40/bd.png",
+    "sha256": "65fd08bf720bf00e7de074c6b8c6f1517eccd3480adaf58b27e142f1a3624fa9"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/ba.png",
+    "url": "https://flagcdn.com/w40/ba.png",
+    "sha256": "cb9fcd81df5a303e2595f2b79981f93cfb90642b8cf6573f533bd7a38e5b9a9d"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/bg.png",
+    "url": "https://flagcdn.com/w40/bg.png",
+    "sha256": "e7f6afef8cd01e931b99d971b195c3c1b699c0fbe5f37361531dc0a6e2505d89"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/mm.png",
+    "url": "https://flagcdn.com/w40/mm.png",
+    "sha256": "08abff58abf4da5ed0311b4e8884bca551289ac650439cbe0e5119e2231c719a"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/hk.png",
+    "url": "https://flagcdn.com/w40/hk.png",
+    "sha256": "1d144d25e1862fc6ef5f69b428fa58c99c69bce509a91640ab073030b2f4e773"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/mw.png",
+    "url": "https://flagcdn.com/w40/mw.png",
+    "sha256": "7ed7158bfa65fd133577af8adc0017eb9f1b8a59965b62da595d11e91f252ceb"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/cn.png",
+    "url": "https://flagcdn.com/w40/cn.png",
+    "sha256": "5963de4e9e57e0371ec9c66e5f138d82d317081cc63f980d92ab199bdbf6c3ed"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/hr.png",
+    "url": "https://flagcdn.com/w40/hr.png",
+    "sha256": "5cd7795f670dc14e83b97cc49403b011f5aa91bae36247be1f1aa0cbf2597fe9"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/cz.png",
+    "url": "https://flagcdn.com/w40/cz.png",
+    "sha256": "a6a0fb9794ba47fbbbb967ad45d6a9468e1a0fa0ec5fd2d6e6e31f3e5322c7b1"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/dk.png",
+    "url": "https://flagcdn.com/w40/dk.png",
+    "sha256": "ca559221f91cd71210fa5deaccf8af0e754d03b2e7cd13277f771ae11c402534"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/nl.png",
+    "url": "https://flagcdn.com/w40/nl.png",
+    "sha256": "4b3d9a01137049df859c894008855d4b35d9e1aa30c9af7978b5449e28feb1fb"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/us.png",
+    "url": "https://flagcdn.com/w40/us.png",
+    "sha256": "09dd59a3417221f62c23c3abb37e9b598357502643a0ea9ad6561a50b2dcc1dc"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/ee.png",
+    "url": "https://flagcdn.com/w40/ee.png",
+    "sha256": "2177f43c512ef7781ba75e53d177a0d743d8462c093a7d77d8d90a423ea9160c"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/ph.png",
+    "url": "https://flagcdn.com/w40/ph.png",
+    "sha256": "fe9eb7f98f49ff4ef471832f59a586b62ddbee262bd3046a0dab5487a1daeda8"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/fi.png",
+    "url": "https://flagcdn.com/w40/fi.png",
+    "sha256": "7239c8caa2b1c5c37268586162e72cd7d2e43a6c8908ab960777d0659ce40bb3"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/fr.png",
+    "url": "https://flagcdn.com/w40/fr.png",
+    "sha256": "eec284175556a77e98f09db03f88aa064c2ff7500b56264dc119fbf8ee4ef6bc"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/gn.png",
+    "url": "https://flagcdn.com/w40/gn.png",
+    "sha256": "3eaed8da6b86e4cd6c02d1a1a022d7af7d70adaa7da48c609a44dfeccf4444c5"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/ug.png",
+    "url": "https://flagcdn.com/w40/ug.png",
+    "sha256": "2c642bca02821e28882fb27ccc248fca76057c53a40f65d505b7b07a4d8e6333"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/ge.png",
+    "url": "https://flagcdn.com/w40/ge.png",
+    "sha256": "d14f2b79175a996d4eb14ea81e7fd4ad03283defd5cce060a7940b8460c9c55b"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/de.png",
+    "url": "https://flagcdn.com/w40/de.png",
+    "sha256": "4bf08b86243b0c5d79c196728100dd278a398ab57edaf56c871fceb9d879dbeb"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/gr.png",
+    "url": "https://flagcdn.com/w40/gr.png",
+    "sha256": "3764eb1cf549d1a8903e4f4ed0cdf3b09a33306f32594273fd2299c4324a6918"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/ng.png",
+    "url": "https://flagcdn.com/w40/ng.png",
+    "sha256": "3c7e39999083f6e9c603c46ac2e91159c82122dc1a798d37f030c7d226d22bc9"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/hu.png",
+    "url": "https://flagcdn.com/w40/hu.png",
+    "sha256": "6868cbc41a35d95893901775790658b7560195bc6f01bc029df3d63a3ef773e5"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/is.png",
+    "url": "https://flagcdn.com/w40/is.png",
+    "sha256": "f7b5faba922a008bcc6d640cc38ba7629cd168ab0e155cda593a914900a59113"
+  },
+  {
+    "source": "原站引用 FlagCDN 国旗",
+    "path": "flags/id.png",
+    "url": "https://flagcdn.com/w40/id.png",
+    "sha256": "b2cbe304f50cdb9dd976b9221512116318b608c2bd6dd44ab67b66f739e86064"
+  },
+  {
+    "path": "images/app-*.svg",
+    "source": "原站集成工具 SVG，静态 AST 提取，商标权归各自权利人，未执行下载的 JavaScript。"
+  }
+]

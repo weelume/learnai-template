@@ -1,0 +1,49 @@
+'use client'
+import {useState,useEffect,useRef,useSyncExternalStore} from 'react'
+import {AnimatePresence} from 'framer-motion'
+import {languages,scenarios,type Locale} from './data'
+import {Modal,Reveal,debug,Microphone} from './Motion'
+type Language=typeof languages[number]
+const subscribeWidth=(notify:()=>void)=>{window.addEventListener('resize',notify);return()=>window.removeEventListener('resize',notify)}
+const delayColumns=()=>window.innerWidth>=1280?5:window.innerWidth>=1024?3:window.innerWidth>=640?2:1
+interface SpeechResultEvent {results:{[index:number]:{[index:number]:{transcript:string}}}}
+interface Recognition {lang:string;continuous:boolean;interimResults:boolean;onresult:((event:SpeechResultEvent)=>void)|null;onerror:((event:{error:string})=>void)|null;onend:(()=>void)|null;start:()=>void;abort:()=>void}
+type SpeechWindow=Window&{SpeechRecognition?:new()=>Recognition;webkitSpeechRecognition?:new()=>Recognition}
+export function LanguagePractice({locale}:{locale:Locale}){
+ const [query,setQuery]=useState(''),[selected,setSelected]=useState<Language|null>(null)
+ const columns=useSyncExternalStore(subscribeWidth,delayColumns,()=>5)
+ const filtered=languages.filter(([en,zh])=>(en+' '+zh).toLowerCase().includes(query.trim().toLowerCase()))
+ return <section className="la-section la-languages" id="languages"><h2>{locale==='zh'?<>从你熟悉的语言开始<br/>走进 100+ 真实对话场景</>:<>Practice English Conversations<br/>In 100+ Real-Life Scenarios</>}</h2><p className="la-intro">{locale==='zh'?'选择你的母语，开启一段英语情境对话。当前提供本地脚本演示，不调用真实 AI 或自动上传语音。':'Our AI speech to text transcription supports 99 languages, just select your language and start practicing english speaking instantly.'}</p><div className="la-search"><span aria-hidden="true">⌕</span><input type="search" aria-label={locale==='zh'?'搜索语言':'Search languages'} placeholder={locale==='zh'?'搜索中文或英文语言名称…':'Search 100+ native languages...'} value={query} onChange={e=>{setQuery(e.target.value);debug('language.search',{length:e.target.value.length})}}/>{query&&<button onClick={()=>setQuery('')}>{locale==='zh'?'清空':'Clear'}</button>}</div><div className="la-language-grid">{filtered.map((language,index)=><Reveal key={language[0]} y={30} delay={Math.floor(index/columns)*.12} duration={.5} transition={{duration:.5,delay:Math.floor(index/columns)*.12,ease:[.16,1,.3,1]}}><button className="la-language-pill" onClick={()=>{setSelected(language);debug('language.open',{language:language[2]})}}><Flag language={language}/><span>{language[locale==='zh'?1:0]}</span><span aria-hidden="true">+</span></button></Reveal>)}</div>{!filtered.length&&<div className="la-empty" role="status"><p>{locale==='zh'?'没有找到匹配的语言':'No languages matching your query found.'}</p><button className="la-button" onClick={()=>setQuery('')}>{locale==='zh'?'重置搜索':'Reset Search Filter'}</button></div>}<AnimatePresence>{selected&&<PracticeDrawer key={selected[0]} language={selected} locale={locale} onClose={()=>{setSelected(null);debug('practice.close')}}/>}</AnimatePresence></section>
+}
+function Flag({language}:{language:Language}){return ['ast','cat','kur','gal'].includes(language[2])?<span className={'la-custom-flag la-flag-'+language[2]} aria-hidden="true"/>:<img src={'/templates/learnai/flags/'+language[2]+'.png'} alt="" width="24" height="24" loading="lazy"/>}
+function PracticeDrawer({language,locale,onClose}:{language:Language;locale:Locale;onClose:()=>void}){
+ const [scenario,setScenario]=useState<typeof scenarios[number]|null>(null),[messages,setMessages]=useState<{sender:'user'|'ai';text:string}[]>([]),[text,setText]=useState(''),[pending,setPending]=useState(false),[listening,setListening]=useState(false),[notice,setNotice]=useState('')
+ const timer=useRef<ReturnType<typeof setTimeout>|null>(null),recognition=useRef<Recognition|null>(null),bottom=useRef<HTMLDivElement>(null)
+ useEffect(()=>()=>{if(timer.current)clearTimeout(timer.current);recognition.current?.abort();if('speechSynthesis'in window)window.speechSynthesis.cancel()},[])
+ useEffect(()=>{bottom.current?.scrollIntoView({block:'nearest',behavior:'instant'})},[messages,pending])
+ function changeScenario(){if(timer.current)clearTimeout(timer.current);recognition.current?.abort();setPending(false);setListening(false);setText('');setMessages([]);setScenario(null);setNotice('');if('speechSynthesis'in window)window.speechSynthesis.cancel()}
+ function send(){
+  if(!text.trim()||pending||!scenario)return
+  const message=text.trim(),current=scenario
+  setMessages(previous=>[...previous,{sender:'user',text:message}]);setText('');setPending(true);debug('chat.start',{scenario:current.id,length:message.length})
+  timer.current=setTimeout(()=>{
+   let reply:string=current.reply
+   if(current.id==='cafe'&&!/coffee|cappuccino/i.test(message))reply='Sure thing! I can get that prepared. Would you like to dine in or is this for takeaway?'
+   if(current.id==='hotel'&&!/reservation|booking|3 nights/i.test(message))reply='Excellent. Let me pull up your reservation. Could you confirm your last name for me?'
+   setMessages(previous=>[...previous,{sender:'ai',text:reply}]);setPending(false);debug('chat.complete',{scenario:current.id,source:'local-script'})
+  },1200)
+ }
+ function record(){
+  if(listening){recognition.current?.abort();setListening(false);return}
+  const Constructor=(window as SpeechWindow).SpeechRecognition||(window as SpeechWindow).webkitSpeechRecognition
+  if(!Constructor){setNotice(locale==='zh'?'此浏览器不支持语音识别，请在输入框输入练习内容。':'Speech recognition is not supported in this browser. Please type your response.');debug('speech.unsupported');return}
+  const instance=new Constructor();recognition.current=instance;instance.lang='en-US';instance.continuous=false;instance.interimResults=false
+  instance.onresult=event=>{setText(event.results[0]?.[0]?.transcript||'');debug('speech.transcribed')}
+  instance.onerror=event=>{console.error('[learnai] speech recognition failed',{code:event.error});setNotice(locale==='zh'?'语音识别未完成，请检查麦克风权限或使用文字输入。':'Speech recognition did not complete. Check microphone permission or type your response.');setListening(false)}
+  instance.onend=()=>{setListening(false);debug('speech.end')}
+  try{instance.start();setListening(true);setNotice(locale==='zh'?'正在使用浏览器语音服务；音频可能由浏览器提供方处理。':'Using the browser speech service; audio may be processed by the browser provider.');debug('speech.start')}
+  catch(error){console.error('[learnai] speech start failed',error instanceof Error?error.name:'unknown');setNotice(locale==='zh'?'无法启动语音识别，请使用文字输入。':'Unable to start speech recognition. Please type your response.');setListening(false)}
+ }
+ function speak(value:string){if(!('speechSynthesis'in window)){setNotice(locale==='zh'?'此浏览器不支持语音朗读。':'Speech playback is not supported in this browser.');return}window.speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(value);utterance.lang='en-US';utterance.onerror=()=>{setNotice(locale==='zh'?'语音朗读未完成，请检查浏览器声音设置。':'Speech playback did not complete. Check browser audio settings.');console.error('[learnai] speech playback failed')};window.speechSynthesis.speak(utterance);debug('speech.play')}
+ return <Modal label={locale==='zh'?'英语情境练习':'English roleplay practice'} onClose={onClose}><header className="la-drawer-header"><div><Flag language={language}/><h3>{language[locale==='zh'?1:0]}</h3></div><button aria-label={locale==='zh'?'关闭练习':'Close practice'} onClick={onClose}>×</button></header><p className="la-drawer-note">{locale==='zh'?'本地角色扮演示例 · 不提供真实英语测评':'Local roleplay demo · No real English assessment'}</p><div className="la-drawer-body">{!scenario?<><h3>{locale==='zh'?'选择练习情境':'Select Practice Scenario'}</h3><p>{locale==='zh'?'选择一个场景，用英语输入回答，或主动开启浏览器语音识别。':'Practice real English speech scenarios by selecting an option and speaking or typing your response!'}</p><div className="la-scenarios">{scenarios.map(item=><button key={item.id} onClick={()=>{setScenario(item);setMessages([{sender:'ai',text:item.first}]);debug('scenario.start',{id:item.id})}}><strong>{item.title[locale]}</strong><span>{item.task[locale]}</span><small>{locale==='zh'?'开始练习':'Start'}</small></button>)}</div></>:<><button className="la-change" onClick={changeScenario}>{locale==='zh'?'更换练习情境':'Change Practice Scenario'}</button><div className="la-task"><small>{locale==='zh'?'你的目标':'Your Target task'}</small><p>{scenario.task[locale]}</p></div><div className="la-messages" role="log" aria-live="polite" aria-relevant="additions">{messages.map((message,index)=><div key={index} className={'la-message la-message-'+message.sender}><p>{message.text}</p>{message.sender==='ai'&&<button onClick={()=>speak(message.text)}>{locale==='zh'?'朗读英语':'Listen Speech'}</button>}</div>)}{pending&&<div className="la-typing" aria-label={locale==='zh'?'正在生成示例回复':'Preparing sample reply'}><i/><i/><i/></div>}<div ref={bottom}/></div><form className="la-chat-form" onSubmit={e=>{e.preventDefault();send()}}><button type="button" aria-label={listening?(locale==='zh'?'停止语音识别':'Stop speech recognition'):(locale==='zh'?'开启浏览器语音识别':'Start browser speech recognition')} aria-pressed={listening} onClick={record} className={listening?'la-recording':''}>{listening?'■':<Microphone/>}</button><input maxLength={1500} value={text} disabled={listening} onChange={e=>setText(e.target.value)} aria-label={locale==='zh'?'英语回答':'English response'} placeholder={listening?(locale==='zh'?'正在聆听…':'Listening...'):(locale==='zh'?'用英语输入你的回答':'Say or type your response in English')}/><button type="submit" disabled={!text.trim()||pending||listening}>{locale==='zh'?'发送':'Send'}</button></form><small className="la-demo-note">{locale==='zh'?'发送只触发本地脚本，内容不上传、不保存。语音服务仅在主动点击后启用。':'Sending runs a local script; text is not uploaded or saved. Speech services start only when requested.'}</small></>}{notice&&<p role="status" className="la-notice">{notice}</p>}</div></Modal>
+}

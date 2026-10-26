@@ -1,0 +1,86 @@
+{
+  "$schema": "../schemas/verification.schema.json",
+  "format": "git-template-verification",
+  "formatVersion": "0.2.0",
+  "status": "passed",
+  "checkedAt": "2026-10-26T01:19:51.690Z",
+  "sourceCommit": null,
+  "sourceDigest": "228692835e6816e71c134f96d30993013a6ec35da327ba3e07d23b8689ba69b3",
+  "checks": [
+    {
+      "id": "typecheck",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "typecheck"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-10-26T01:17:42.570Z",
+      "finishedAt": "2026-10-26T01:17:45.468Z"
+    },
+    {
+      "id": "lint",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "lint"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-10-26T01:17:45.470Z",
+      "finishedAt": "2026-10-26T01:17:48.676Z"
+    },
+    {
+      "id": "test",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "test"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-10-26T01:17:48.676Z",
+      "finishedAt": "2026-10-26T01:17:49.594Z"
+    },
+    {
+      "id": "build",
+      "cwd": ".",
+      "argv": [
+        "pnpm",
+        "run",
+        "build"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "startedAt": "2026-10-26T01:17:49.594Z",
+      "finishedAt": "2026-10-26T01:18:07.887Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "web",
+      "status": "passed",
+      "stopped": true,
+      "checkedAt": "2026-10-26T01:18:09.070Z"
+    }
+  ],
+  "environment": {
+    "platform": "linux",
+    "arch": "x64",
+    "node": "v24.16.0",
+    "packageManager": "pnpm 9.15.4",
+    "cleanDirectory": false,
+    "localGitClone": false
+  },
+  "limitations": [
+    "完整原站三端逐帧及每项hover/滚动轨迹尚未全部对照，不能宣称全量视觉动效一致。",
+    "浏览器语音识别、朗读与系统减少动态效果未实际授权/切换验证。",
+    "截图实际像素小于配置视口，已按解码真实尺寸登记，未放大。",
+    "非独立干净Git克隆验收。",
+    "素材商业再分发授权未核实，listed=false、redistributionAllowed=false。"
+  ]
+}

@@ -1,0 +1,7 @@
+import {asset,type Locale} from './data'
+export function Mockup({image,locale,kind=0}:{image:string;locale:Locale;kind?:number}){
+ if(locale==='en')return <img className="la-mockup" src={asset(image)} alt={['Personalized study plan','Speech feedback','Real-life scenarios','Practice progress'][kind%4]} loading="lazy"/>
+ return <div className={'la-mockup la-ui la-ui-'+kind} role="img" aria-label={['个性化学习路径界面示意','语音反馈界面示意','情境对话界面示意','进度分析界面示意'][kind%4]}><div className="la-ui-top"><span>英语口语教练</span><span>● 在线</span></div>
+  {kind%4===0?<><h4>今天 想练点什么</h4><p>为你定制 每天进步一点</p><div className="la-ui-pills"><span>日常对话</span><span>商务表达</span><span>旅行英语</span></div><div className="la-ui-panel"><strong>你的学习路径</strong><p>第一步 · 轻松自我介绍</p><div className="la-ui-progress"><i/></div><small>已完成 4 / 7 次练习</small></div></>:kind%4===1?<><h4>每一次表达 都有反馈</h4><div className="la-wave" aria-hidden="true">{Array.from({length:31},(_,i)=><i key={i} style={{height:12+((i*17)%50)}}/>)}</div><div className="la-ui-pills"><span>发音 92</span><span>节奏 88</span><span>清晰度 95</span></div><p>试着放慢语速 在短句间自然停顿</p></>:kind%4===2?<><h4>真实场景 放心开口</h4><div className="la-ui-panel">☕ 咖啡馆点单<p>练习说出你喜欢的咖啡</p></div><div className="la-ui-panel">✈ 机场与旅行<p>让下一次出发更从容</p></div></>:<><h4>你的进步 看得见</h4><strong className="la-score">92 <small>流利度</small></strong><div className="la-chart" aria-hidden="true">{[30,42,38,60,55,75,92].map((n,i)=><i key={i} style={{height:n+'%'}}/>)}</div><div className="la-ui-pills"><span>连续 7 天</span><span>练习 48 分钟</span></div></>}
+ </div>
+}

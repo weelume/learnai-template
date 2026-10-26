@@ -1,0 +1,265 @@
+{
+  "$schema": "./schemas/template.schema.json",
+  "format": "git-template",
+  "formatVersion": "0.2.0",
+  "id": "learnai",
+  "version": "1.0.0",
+  "gitUrl": "https://github.com/weelume/learnai-template",
+  "name": "Learn.AI · AI 英语口语教练",
+  "localizedNames": {
+    "en": "Learn.AI · English Speaking Coach"
+  },
+  "summary": "薄荷绿色双语英语学习模板，包含语言搜索、角色扮演抽屉、同心环练习区及完整导航内页。",
+  "sceneId": "landing-page",
+  "listed": false,
+  "tags": [
+    "英语学习",
+    "AI 教练",
+    "情境对话",
+    "薄荷绿",
+    "双语",
+    "交互动效"
+  ],
+  "stack": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Framer Motion"
+  ],
+  "accentColor": "#00b782",
+  "cover": "assets/desktop-home.webp",
+  "screenshots": [
+    {
+      "src": "assets/desktop-home.webp",
+      "alt": "Learn.AI desktop home",
+      "device": "desktop",
+      "width": 1425,
+      "height": 990,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/desktop-features.webp",
+      "alt": "Learn.AI desktop features",
+      "device": "desktop",
+      "width": 1425,
+      "height": 990,
+      "surfaceId": "site",
+      "pageSlug": "features"
+    },
+    {
+      "src": "assets/desktop-blog.webp",
+      "alt": "Learn.AI desktop blog",
+      "device": "desktop",
+      "width": 1425,
+      "height": 990,
+      "surfaceId": "site",
+      "pageSlug": "blog"
+    },
+    {
+      "src": "assets/desktop-contact.webp",
+      "alt": "Learn.AI desktop contact",
+      "device": "desktop",
+      "width": 1425,
+      "height": 990,
+      "surfaceId": "site",
+      "pageSlug": "contact"
+    },
+    {
+      "src": "assets/tablet-home.webp",
+      "alt": "Learn.AI tablet home",
+      "device": "tablet",
+      "width": 819,
+      "height": 1159,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/tablet-features.webp",
+      "alt": "Learn.AI tablet features",
+      "device": "tablet",
+      "width": 819,
+      "height": 1159,
+      "surfaceId": "site",
+      "pageSlug": "features"
+    },
+    {
+      "src": "assets/tablet-blog.webp",
+      "alt": "Learn.AI tablet blog",
+      "device": "tablet",
+      "width": 819,
+      "height": 1159,
+      "surfaceId": "site",
+      "pageSlug": "blog"
+    },
+    {
+      "src": "assets/tablet-contact.webp",
+      "alt": "Learn.AI tablet contact",
+      "device": "tablet",
+      "width": 819,
+      "height": 1159,
+      "surfaceId": "site",
+      "pageSlug": "contact"
+    },
+    {
+      "src": "assets/mobile-home.webp",
+      "alt": "Learn.AI mobile home",
+      "device": "mobile",
+      "width": 375,
+      "height": 812,
+      "surfaceId": "site",
+      "pageSlug": ""
+    },
+    {
+      "src": "assets/mobile-features.webp",
+      "alt": "Learn.AI mobile features",
+      "device": "mobile",
+      "width": 375,
+      "height": 812,
+      "surfaceId": "site",
+      "pageSlug": "features"
+    },
+    {
+      "src": "assets/mobile-blog.webp",
+      "alt": "Learn.AI mobile blog",
+      "device": "mobile",
+      "width": 375,
+      "height": 812,
+      "surfaceId": "site",
+      "pageSlug": "blog"
+    },
+    {
+      "src": "assets/mobile-contact.webp",
+      "alt": "Learn.AI mobile contact",
+      "device": "mobile",
+      "width": 375,
+      "height": 812,
+      "surfaceId": "site",
+      "pageSlug": "contact"
+    }
+  ],
+  "surfaces": [
+    {
+      "id": "site",
+      "name": "官网",
+      "platform": "pc",
+      "locales": [
+        "zh",
+        "en"
+      ],
+      "pages": [
+        {
+          "slug": "",
+          "title": "首页",
+          "localizedTitles": {
+            "en": "Home"
+          }
+        },
+        {
+          "slug": "features",
+          "title": "产品功能",
+          "localizedTitles": {
+            "en": "Features"
+          }
+        },
+        {
+          "slug": "how-it-works",
+          "title": "如何开始",
+          "localizedTitles": {
+            "en": "How it works"
+          }
+        },
+        {
+          "slug": "practice",
+          "title": "情境练习",
+          "localizedTitles": {
+            "en": "Practice"
+          }
+        },
+        {
+          "slug": "pricing",
+          "title": "价格方案",
+          "localizedTitles": {
+            "en": "Pricing"
+          }
+        },
+        {
+          "slug": "blog",
+          "title": "学习博客",
+          "localizedTitles": {
+            "en": "Blog"
+          }
+        },
+        {
+          "slug": "contact",
+          "title": "联系我们",
+          "localizedTitles": {
+            "en": "Contact"
+          }
+        },
+        {
+          "slug": "about",
+          "title": "关于我们",
+          "localizedTitles": {
+            "en": "About"
+          }
+        },
+        {
+          "slug": "privacy",
+          "title": "隐私政策",
+          "localizedTitles": {
+            "en": "Privacy"
+          }
+        },
+        {
+          "slug": "terms",
+          "title": "服务条款",
+          "localizedTitles": {
+            "en": "Terms of Service"
+          }
+        },
+        {
+          "slug": "acceptable-use",
+          "title": "使用规范",
+          "localizedTitles": {
+            "en": "Acceptable Use"
+          }
+        },
+        {
+          "slug": "cookies",
+          "title": "Cookie 设置",
+          "localizedTitles": {
+            "en": "Cookie Settings"
+          }
+        },
+        {
+          "slug": "blog/daily-speaking",
+          "title": "每天十分钟 让开口成为习惯",
+          "localizedTitles": {
+            "en": "Ten minutes a day to build a speaking habit"
+          }
+        },
+        {
+          "slug": "blog/pronunciation",
+          "title": "从节奏开始 让发音更自然",
+          "localizedTitles": {
+            "en": "Start with rhythm for more natural pronunciation"
+          }
+        },
+        {
+          "slug": "blog/interview",
+          "title": "用真实情境 练习英语面试",
+          "localizedTitles": {
+            "en": "Practice English interviews with real scenarios"
+          }
+        }
+      ]
+    }
+  ],
+  "license": {
+    "type": "restricted",
+    "file": "docs/LICENSE.md",
+    "summary": "参考设计、图片与商标分别保留权利；商业再分发授权尚未完整核实。",
+    "redistributionAllowed": false
+  }
+}
